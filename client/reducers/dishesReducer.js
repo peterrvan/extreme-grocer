@@ -36,11 +36,11 @@
     //      synced: false,
     //    };
  
-    //  case types.UPDATE_LOCATION:
-    //    return {
-    //      ...state,
-    //      newLocation: action.payload,
-    //    };
+     case types.UPDATE_SEARCH:
+       return {
+         ...state,
+         newSearch: action.payload,
+       };
  
     //  case types.ADD_CARD: {
     //    const newMarketList = state.marketList.map((market, idx) => {

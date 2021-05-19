@@ -26,14 +26,17 @@
  const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
 
 //  const mapDispatchToProps = dispatch => ({
-//    syncMarkets: () => dispatch(actions.syncMarkets()),
+//    updateSearch: () => dispatch(actions.updateSearch()),
 //  });
  
  const SearchContainer = props => (
    <div className="container">
      <div className="outerBox">
        <h1 id="header">Search Here</h1>
-       <SearchBar />
+       <SearchBar 
+       searchList={props.searchList}
+       newSearch={props.newSearch}
+       updateSearch={props.updateSearch}/>
        {/* <MarketsContainer /> */}
      </div>
    </div>
