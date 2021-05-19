@@ -10,11 +10,12 @@
  */
 
  import React from 'react';
- //import Wrapper from './containers/MainContainer';
+ import MainContainer from './containers/MainContainer.jsx';
  
  const App = () => (
     <div id="app">
-        <h1>HELLO WORLD</h1>
+        <h1>TEST</h1>
+        <MainContainer />
     </div>
  );
  

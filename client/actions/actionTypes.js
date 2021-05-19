@@ -9,10 +9,10 @@
  * ************************************
  */
 
- export const ADD_CARD = 'ADD_CARD';
- export const DELETE_CARD = 'DELETE_CARD';
- export const ADD_MARKET = 'ADD_MARKET';
- export const UPDATE_LOCATION = 'UPDATE_LOCATION';
- export const SYNC_MARKETS = 'SYNC_MARKETS';
- export const LOAD_MARKETS = 'LOAD_MARKETS';
+ export const SEARCH = 'SEARCH';
+ export const UPDATE_SEARCH = 'UPDATE_SEARCH';
+ export const ADD_QUANTITY = 'ADD_QUANTITY';
+ export const SUBTRACT_QUANTITY = 'SUBTRACT_QUANTITY';
+ export const ADD_DISH = 'ADD_DISH';
+ export const REMOVE_DISH = 'REMOVE_DISH';
  

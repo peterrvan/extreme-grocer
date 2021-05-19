@@ -10,7 +10,7 @@
  */
 
  import { combineReducers } from 'redux';
- import dishesReducer from './dishesReducer';
+ import dishesReducer from './dishesReducer.js';
  
  export default combineReducers({
    dishes: dishesReducer,

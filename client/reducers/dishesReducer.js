@@ -9,13 +9,13 @@
  * ************************************
  */
 
- import * as types from '../actions/actionTypes';
+ import * as types from '../actions/actionTypes.js';
 
  const initialState = {
-   totalMarkets: 0,
-   totalCards: 0,
-   marketList: [],
-   newLocation: '',
+  //  totalMarkets: 0,
+  //  totalCards: 0,
+   searchList: [],
+   newSearch: '',
    //synced: true,
  };
  

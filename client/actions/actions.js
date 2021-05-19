@@ -10,7 +10,7 @@
  */
 
  import axios from 'axios';
- import * as types from './actionTypes';
+ import * as types from './actionTypes.js';
  
  export const updateLocation = data => ({
    type: types.UPDATE_LOCATION,
