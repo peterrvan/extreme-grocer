@@ -4,7 +4,8 @@ module.exports = {
   mode: process.env.NODE_ENV,
   entry: './client/index.js',
   output: {
-      path: path.resolve(__dirname, 'build'),
+      //publicPath: '/',
+      path: path.resolve(__dirname, '/build'),
       filename: 'bundle.js'
   },
   module: {
@@ -28,6 +29,9 @@ module.exports = {
   devServer: {
     port: 8080,
     compress: true,
-    publicPath: '/build',
+    publicPath: '/build/',
+    proxy: {
+      '/search': 'http://localhost:3000',
+    }
   }
 }
