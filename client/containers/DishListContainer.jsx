@@ -12,7 +12,6 @@
  import React from 'react';
  import { connect } from 'react-redux';
  import { bindActionCreators } from 'redux';
-//  import SearchBar from '../components/SearchBar.jsx';
  import DishDisplay from '../components/DishDisplay.jsx';
  import * as actions from '../actions/actions.js';
  

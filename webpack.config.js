@@ -2,10 +2,13 @@ const path = require('path');
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  entry: './client/search.js',
+  entry: {
+    search: './client/search.js',
+    index: './index.js',
+  },
   output: {
       path: path.resolve(__dirname, "client/build"),
-      filename: 'bundle.js'
+      filename: '[name].js'
   },
   module: {
     rules: [

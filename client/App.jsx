@@ -14,7 +14,6 @@
  
  const App = () => (
     <div id="app">
-        <h1>TEST</h1>
         <MainContainer />
     </div>
  );

@@ -1,0 +1,12 @@
+@import '_variables';
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@800&display=swap');
+
+body {
+  background: $lightGreen;
+  color: $fontColor;
+  font-family: 'Alegreya', serif;
+  font-size: 40;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
