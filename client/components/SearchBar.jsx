@@ -9,16 +9,16 @@
  * ************************************
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 
-const SearchBar = dishes => {
-    const [search, updateSearch, newSearch] = useState('');
+const SearchBar = props => {
+    //const [search, updateSearch, newSearch] = useState('');
     function handleChange(e) {
-      dishes.updateSearch(e.target.value);
+      props.updateSearch(e.target.value);
     }
     function handleSubmit(e) {
       e.preventDefault();
-      dishes.search(dishes.newSearch);
+      props.search(props.newSearch);
     }
 
     return(

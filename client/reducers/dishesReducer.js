@@ -16,6 +16,7 @@
   //  totalCards: 0,
    searchList: [],
    newSearch: '',
+   dishList: [],
    //synced: true,
  };
  
@@ -37,16 +38,12 @@
          newSearch: action.payload,
        };
  
-    //  case types.ADD_CARD: {
-    //    const newMarketList = state.marketList.map((market, idx) => {
-    //      if (idx === action.payload) {
-    //        return {
-    //          ...market,
-    //          cards: market.cards + 1,
-    //        };
-    //      }
-    //      return market;
-    //    });
+     case types.ADD_DISH: {
+           return {
+             ...state,
+             dishList: state.dishList.concat(action.payload)
+           };
+         };
  
     //    return {
     //      ...state,

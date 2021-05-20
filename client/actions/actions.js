@@ -18,10 +18,10 @@
   payload: data,
 });
  
-//  export const addCard = id => ({
-//    type: types.ADD_CARD,
-//    payload: id,
-//  });
+ export const addDish = id => ({
+   type: types.ADD_DISH,
+   payload: id,
+ });
  
 //  export const deleteCard = id => (dispatch, getState) => {
 //    if (getState().markets.marketList[id].cards > 0) {
