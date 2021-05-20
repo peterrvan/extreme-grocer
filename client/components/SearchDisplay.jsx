@@ -25,7 +25,7 @@
   }
 
   return(
-    <div className="searchResult">
+    <div className="searchDisplay">
         <div key={props.index}>
             <h1>{props.title}</h1>
             <img src={props.image}></img>

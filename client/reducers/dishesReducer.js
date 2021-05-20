@@ -23,7 +23,7 @@
  // action arg accesses the action types in actionType.js file
  const dishesReducer = (state = initialState, action) => {
    // switch is like focus on this variable
-   switch (action.type) {
+  switch (action.type) {
      // case is like if/else statement
      case types.SEARCH:
        return {
@@ -39,12 +39,47 @@
        };
  
      case types.ADD_DISH: {
+        return {
+          ...state,
+          dishList: state.dishList.concat(action.payload)
+        };
+     };
+     //pass index into payload
+     case types.ADD_QUANTITY: {
+      // const newDishList = state.dishList;
+      // newDishList[action.payload].quantity += 1;
+       const newDishList = state.dishList.map((dish, idx) => {
+         if (idx === action.payload) {
            return {
-             ...state,
-             dishList: state.dishList.concat(action.payload)
-           };
+             ...dish,
+             quantity: dish.quantity + 1,
+           }
+         }
+         return dish;
+       })
+          return {
+            ...state,
+            dishList: newDishList,
+          };
+     };
+
+     case types.SUBTRACT_QUANTITY: {
+      const newDishList = state.dishList.map((dish, idx) => {
+        if (idx === action.payload) {
+          return {
+            ...dish,
+            quantity: dish.quantity - 1,
+          }
+        }
+        return dish;
+      })
+         return {
+           ...state,
+           dishList: newDishList,
          };
- 
+    };
+
+
     //    return {
     //      ...state,
     //      totalCards: state.totalCards + 1,
@@ -87,7 +122,7 @@
      // default is else statement
      default:
        return state;
-   }
+  }
  };
  
  export default dishesReducer;

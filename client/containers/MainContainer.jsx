@@ -14,6 +14,7 @@
  import { bindActionCreators } from 'redux';
  //import TotalsDisplay from '../components/TotalsDisplay';
  import SearchContainer from './SearchContainer.jsx';
+ import DishListContainer from './DishListContainer.jsx';
  import * as actions from '../actions/actions.js';
  
  const mapStateToProps = ({
@@ -36,6 +37,7 @@
        <h1 id="header">Extreme Grocer</h1>
        {/* <TotalsDisplay {...props} /> */}
        <SearchContainer />
+       <DishListContainer />
      </div>
    </div>
  );

@@ -23,6 +23,16 @@
    payload: data,
  });
  
+ export const addQty = index => ({
+  type: types.ADD_QUANTITY,
+  payload: index,
+});
+
+export const subQty = index => ({
+  type: types.SUBTRACT_QUANTITY,
+  payload: index,
+});
+
 //  export const deleteCard = id => (dispatch, getState) => {
 //    if (getState().markets.marketList[id].cards > 0) {
 //      dispatch({ type: types.DELETE_CARD, payload: id });

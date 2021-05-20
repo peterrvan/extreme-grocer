@@ -4,7 +4,7 @@
  * @module  SearchContainer
  * @author
  * @date
- * @description stateful component that renders TotalsDisplay and MarketsContainer
+ * @description stateful component that renders the search bar & search results
  *
  * ************************************
  */
@@ -14,7 +14,6 @@
  import { bindActionCreators } from 'redux';
  import SearchBar from '../components/SearchBar.jsx';
  import SearchDisplay from '../components/SearchDisplay.jsx';
-//  import MarketsContainer from './MarketsContainer';
  import * as actions from '../actions/actions.js';
  
 const mapStateToProps = ({
@@ -43,9 +42,9 @@ const SearchContainer = props => {
     />);
   }
   return (
-   <div className="container">
+   <div className="searchContainer">
      <div className="outerBox">
-       <h1 id="header">Search Here</h1>
+       <h1 id="header">Search Container</h1>
        <SearchBar 
        search={props.search}
        newSearch={props.newSearch}
