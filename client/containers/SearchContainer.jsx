@@ -34,7 +34,7 @@
      <div className="outerBox">
        <h1 id="header">Search Here</h1>
        <SearchBar 
-       searchList={props.searchList}
+       search={props.search}
        newSearch={props.newSearch}
        updateSearch={props.updateSearch}/>
        {/* <MarketsContainer /> */}

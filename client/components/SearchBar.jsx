@@ -9,25 +9,76 @@
  * ************************************
  */
 
- import React from 'react';
+import React, { useState } from 'react';
 
- const SearchBar = ({
-   search,
-   newSearch,
-   updateSearch,
- }) => (
-   <div>
-     <form onSubmit={search}>
-       <input
-         id="new-search"
-         value={newSearch}
-         onChange={e => updateSearch(e.target.value)}
-       />
-       <button id='search' className="primary" onClick={console.log("HELLO")}>Search</button>
-       {/* <button id='search' className="primary" type="submit">Search</button> */}
-     </form>
-   </div>
- );
+const SearchBar = dishes => {
+    const [search, updateSearch, newSearch] = useState('');
+    function handleChange(e) {
+      dishes.updateSearch(e.target.value);
+    }
+    function handleSubmit(e) {
+      e.preventDefault();
+      dishes.search(dishes.newSearch);
+    }
+
+    return(
+      <div>
+        <h3>Create New Market</h3>
+        <form onSubmit={handleSubmit}> 
+          <label htmlFor='Search'>Search</label>
+          <input type="text" id="location" onChange={handleChange}></input>
+          <button type="submit" id="addMarket" className="button">Search</button>
+        </form>
+      </div>
+    )
+  }
+
+
+
+// const SearchBar = ({
+//     search,
+//     newSearch,
+//     updateSearch,
+//   }) => (
+//     <div>
+//       <form onSubmit={search}>
+//         <input
+//           id="new-search"
+//           value={newSearch}
+//           onChange={e => updateSearch(e.target.value)}
+//         />
+//         {/* <button id='search' className="primary">Search</button> */}
+//         <button id="searching" className="primary" onClick={console.log('BUTTON PRESSED')} type="submit">Search</button>
+//       </form>
+//     </div>
+//   );
+
+
+//  const SearchBar = () => {
+//     const [search, updateSearch] = useState('');
+//     function handleChange(e) {
+//       updateSearch(e.target.value);
+//     }
+//     function handleSubmit(e) {
+//       e.preventDefault();
+//       search(e);
+//     }
+//     return (
+//     <div>
+//      <form onSubmit={handleSubmit}>
+//        <input
+//          id="new-search"
+//         //  value={newSearch}
+//          onChange={handleChange}
+//        />
+//        {/* <button id='search' className="primary" onClick={console.log("HELLO")}>Search</button> */}
+//        <button id='search' className="button" type="submit">Search</button>
+//      </form>
+//    </div>
+
+//     )
+//  } 
  
+
  export default SearchBar;
  

@@ -14,7 +14,7 @@ app.get('/', (req, res, next) => {
 
 console.log(path.resolve(__dirname, './index.html'));
 app.use('/search', (req, res, next) => {
-    console.log('HELLO');
+    // console.log('HELLO');
     return res.sendFile(path.resolve(__dirname, '../client/pages/search.html'));
 });
 

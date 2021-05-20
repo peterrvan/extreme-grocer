@@ -24,17 +24,12 @@
    // switch is like focus on this variable
    switch (action.type) {
      // case is like if/else statement
-    //  case types.ADD_MARKET:
-    //    return {
-    //      ...state,
-    //      marketList: state.marketList.concat({
-    //        location: action.payload,
-    //        cards: 0,
-    //      }),
-    //      totalMarkets: state.totalMarkets + 1,
-    //      newLocation: '',
-    //      synced: false,
-    //    };
+     case types.SEARCH:
+       return {
+         ...state,
+         searchList: action.payload,
+         newSearch: '',
+       };
  
      case types.UPDATE_SEARCH:
        return {
