@@ -15,7 +15,13 @@
 
   function handleClick(e) {
     e.preventDefault();
-    props.addDish(props.id);
+    const dish = {
+        id: props.id,
+        title: props.title,
+        image: props.image,
+        quantity: 0,
+    };
+    props.addDish(dish);
   }
 
   return(
@@ -23,6 +29,7 @@
         <div key={props.index}>
             <h1>{props.title}</h1>
             <img src={props.image}></img>
+            <br />
         </div>
         <div className="flex">
             <button className='addToList' onClick={handleClick}>ADD TO LIST</button>

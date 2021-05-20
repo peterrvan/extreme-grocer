@@ -33,8 +33,6 @@ const SearchBar = props => {
     )
   }
 
-
-
 // const SearchBar = ({
 //     search,
 //     newSearch,
@@ -52,7 +50,6 @@ const SearchBar = props => {
 //       </form>
 //     </div>
 //   );
-
 
 //  const SearchBar = () => {
 //     const [search, updateSearch] = useState('');
@@ -79,6 +76,5 @@ const SearchBar = props => {
 //     )
 //  } 
  
-
  export default SearchBar;
  

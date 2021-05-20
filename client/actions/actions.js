@@ -18,9 +18,9 @@
   payload: data,
 });
  
- export const addDish = id => ({
+ export const addDish = data => ({
    type: types.ADD_DISH,
-   payload: id,
+   payload: data,
  });
  
 //  export const deleteCard = id => (dispatch, getState) => {
