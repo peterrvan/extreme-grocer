@@ -12,7 +12,7 @@
  import React from 'react';
  import { connect } from 'react-redux';
  import { bindActionCreators } from 'redux';
- //import TotalsDisplay from '../components/TotalsDisplay';
+ //import Buttons from '../components/Buttons.jsx';
  import SearchContainer from './SearchContainer.jsx';
  import DishListContainer from './DishListContainer.jsx';
  import * as actions from '../actions/actions.js';
@@ -35,7 +35,7 @@
    <div className="container">
      <div className="outerBox">
        <h1 id="header">Extreme Grocer</h1>
-       {/* <TotalsDisplay {...props} /> */}
+       {/* <Buttons /> */}
        <SearchContainer />
        <DishListContainer />
      </div>

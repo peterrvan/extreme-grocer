@@ -33,6 +33,7 @@ const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
  
 const DishListContainer = props => {
   let boxes = [];
+  let dishId = [];
   for (let i = 0; i < props.dishList.length; i++) {
     boxes.push(<DishDisplay 
         key={i}
@@ -44,14 +45,26 @@ const DishListContainer = props => {
         addQty={props.addQty}
         subQty={props.subQty}
     />);
+    dishId.push(props.dishList[i].id);
   }
+
+  function handleClick(e) {
+    e.preventDefault();
+    props.createList(dishId.join());
+  }
+
   return (
    <div className="dishListContainer">
      <div className="outerBox">
        <h1 id="header">Shopping List Container</h1>
      </div>
      <div>{boxes}</div>
+     <div>
+       <button className='createShoppingList' onClick={handleClick}>Create Shopping List</button>
+     </div>
    </div>
+   
+  
   )
 }
  export default connect(mapStateToProps, mapDispatchToProps)(DishListContainer);

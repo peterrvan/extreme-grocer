@@ -12,12 +12,10 @@
  import * as types from '../actions/actionTypes.js';
 
  const initialState = {
-  //  totalMarkets: 0,
-  //  totalCards: 0,
    searchList: [],
    newSearch: '',
    dishList: [],
-   //synced: true,
+   shoppingList: [],
  };
  
  // action arg accesses the action types in actionType.js file
@@ -79,7 +77,12 @@
          };
     };
 
-
+      case types.CREATE_LIST: {
+        console.log('INSIDE THE REDUCER');
+        return {
+          ...state,
+        };
+     };
     //    return {
     //      ...state,
     //      totalCards: state.totalCards + 1,

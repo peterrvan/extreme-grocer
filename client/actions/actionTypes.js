@@ -14,5 +14,6 @@
  export const ADD_QUANTITY = 'ADD_QUANTITY'; //Adds quantity to dish in list
  export const SUBTRACT_QUANTITY = 'SUBTRACT_QUANTITY'; //Subtract quantity to dish in list
  export const ADD_DISH = 'ADD_DISH'; //Adds dish to dish list
+ export const CREATE_LIST = 'CREATE_LIST';
  export const REMOVE_DISH = 'REMOVE_DISH';
  

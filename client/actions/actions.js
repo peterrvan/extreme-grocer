@@ -40,9 +40,7 @@ export const subQty = index => ({
 //  };
  
  export const search = target => (dispatch) => {
-   console.log('YOU ARE IN THE ACTIONS FILE');
    console.log('target: ', target);
-  //  const searchTarget = getState().dishes.newSearch;
    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${target}`)
     .then((data) => {
       dispatch({
@@ -52,6 +50,18 @@ export const subQty = index => ({
     })
  };
  
+ export const createList = target => (dispatch) => {
+  console.log('createList target: ', target);
+  axios.get(`https://api.spoonacular.com/recipes/informationBulk?apiKey=${apiKey}&ids=${target}`)
+   .then((data) => {
+     console.log(data);
+     dispatch({
+       type: types.CREATE_LIST,
+       payload: data.data.results,
+     });
+   })
+};
+
 //  export const syncMarkets = () => (dispatch, getState) => {
 //    axios.put('/markets', getState().markets.marketList)
 //      .then(({ status }) => {
