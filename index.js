@@ -15,10 +15,10 @@ import styles from './client/scss/application.scss'; // eslint-disable-line no-u
 
 render(
     <div>
-    <h1>Welcome to Extreme Grocer!</h1>
-    <form method="GET" action='/search'>
-      <input type='submit' value="search"></input>
-    </form>
+      <h1>Welcome to Extreme Grocer!</h1>
+        <form method="GET" action='/search'>
+          <input className='button' type='submit' value="Start"></input>
+        </form>
     </div>,
     document.getElementById('root'),
   );

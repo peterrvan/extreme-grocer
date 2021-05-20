@@ -48,11 +48,11 @@ const DishListContainer = props => {
   return (
    <div className="dishListContainer">
      <div className="outerBox">
-       <h1 id="header">Dish List Container</h1>
+       <h1 id="header"><u>Saved Dishes</u></h1>
      </div>
      <div>{boxes}</div>
      <div>
-       <button className='createShoppingList' onClick={handleClick}>Create Shopping List</button>
+       <button className='button' onClick={handleClick}>Create Shopping List</button>
      </div>
    </div>
    

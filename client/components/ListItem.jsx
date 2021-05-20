@@ -16,7 +16,7 @@
   return(
     <div className="listItem">
         <div key={props.id}>
-            <span>{props.amount} {props.unit} {props.name}</span>
+            <span>&#8226; {props.amount} {props.unit} {props.name}</span>
         </div>
     </div>
   )

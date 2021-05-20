@@ -44,7 +44,7 @@ const SearchContainer = props => {
   return (
    <div className="searchContainer">
      <div className="outerBox">
-       <h1 id="header">Search Container</h1>
+       <h2 id="header">Search For Dishes!</h2>
        <SearchBar 
        search={props.search}
        newSearch={props.newSearch}

@@ -44,7 +44,7 @@ const ShoppingListContainer = props => {
   return (
    <div className="shoppingListContainer">
      <div className="outerBox">
-       <h1 id="header">Shopping List Container</h1>
+       <h1 id="header"><u>Shopping List</u></h1>
      </div>
      <div>{boxes}</div>
      {/* <div> */}

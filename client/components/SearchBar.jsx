@@ -23,10 +23,8 @@ const SearchBar = props => {
 
     return(
       <div>
-        <h3>Create New Market</h3>
         <form onSubmit={handleSubmit}> 
-          <label htmlFor='Search'>Search</label>
-          <input type="text" id="location" onChange={handleChange}></input>
+          <input className='search' type="text" id="location" onChange={handleChange}></input>
           <button type="submit" id="addMarket" className="button">Search</button>
         </form>
       </div>

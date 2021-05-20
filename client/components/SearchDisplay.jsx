@@ -19,7 +19,7 @@
         id: props.id,
         title: props.title,
         image: props.image,
-        quantity: 0,
+        quantity: 1,
     };
     props.addDish(dish);
   }
@@ -27,12 +27,12 @@
   return(
     <div className="searchDisplay">
         <div key={props.index}>
-            <h1>{props.title}</h1>
+            <h3>{props.title}</h3>
             <img src={props.image}></img>
             <br />
         </div>
-        <div className="flex">
-            <button className='addToList' onClick={handleClick}>ADD TO LIST</button>
+        <div className="searchResult">
+            <button className='button' onClick={handleClick}>Save Dish</button>
         </div>
     </div>
   )

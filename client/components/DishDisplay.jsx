@@ -31,9 +31,9 @@
         </div>
         <div className="flex">
             <span>
-            <button className='quantity' onClick={handleClickMinus}>-</button>
+            <button className='button' onClick={handleClickMinus}>-</button>
             <span style={{padding: 1 + 'em'}}>{props.quantity}</span>
-            <button className='quantity' onClick={handleClickPlus}>+</button>
+            <button className='button' onClick={handleClickPlus}>+</button>
             </span>
         </div>
     </div>

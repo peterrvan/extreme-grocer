@@ -34,13 +34,11 @@
  
  const MainContainer = props => (
    <div className="container">
-     <div className="outerBox">
-       <h1 id="header">Extreme Grocer</h1>
+       <h1 id="header"><u>Extreme Grocer</u></h1>
        {/* <Buttons /> */}
        <SearchContainer />
        <DishListContainer />
        <ShoppingListContainer />
-     </div>
    </div>
  );
  
