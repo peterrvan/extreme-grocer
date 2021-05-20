@@ -10,7 +10,7 @@
  */
  import axios from 'axios';
  import * as types from './actionTypes.js';
- const apiKey = '3f7dc1c2f19b4e3ba7ba30c52cc1932c';
+ const apiKey = '3aed19a92f9b4bb791b00c45346170c5';
 
  export const updateSearch = data => ({
   type: types.UPDATE_SEARCH,

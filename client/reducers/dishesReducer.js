@@ -8,8 +8,7 @@
  *
  * ************************************
  */
-
- import * as types from '../actions/actionTypes.js';
+import * as types from '../actions/actionTypes.js';
 
  const initialState = {
    searchList: [],
@@ -18,11 +17,10 @@
    shoppingList: [],
  };
  
- // action arg accesses the action types in actionType.js file
+
  const dishesReducer = (state = initialState, action) => {
-   // switch is like focus on this variable
+  
   switch (action.type) {
-     // case is like if/else statement
      case types.SEARCH:
        return {
          ...state,
@@ -42,10 +40,9 @@
           dishList: state.dishList.concat(action.payload)
         };
      };
-     //pass index into payload
+
      case types.ADD_QUANTITY: {
-      // const newDishList = state.dishList;
-      // newDishList[action.payload].quantity += 1;
+
        const newDishList = state.dishList.map((dish, idx) => {
          if (idx === action.payload) {
            return {
@@ -80,12 +77,12 @@
       case types.CREATE_LIST: {
         console.log('INSIDE THE REDUCER');
         const data = [];
-        action.payload.forEach(element => {
+        action.payload.forEach((element, index) => {
           element.extendedIngredients.forEach(ingredient => {
             data.push({
               id: ingredient.id,
               name: ingredient.name,
-              amount: ingredient.amount,
+              amount: ingredient.amount * state.dishList[index].quantity,
               unit: ingredient.unit,
             })
           })
@@ -94,48 +91,10 @@
 
         return {
           ...state,
+          shoppingList: data,
         };
      };
-    //    return {
-    //      ...state,
-    //      totalCards: state.totalCards + 1,
-    //      marketList: newMarketList,
-    //      synced: false,
-    //    };
-    //  }
- 
-    //  case types.DELETE_CARD: {
-    //    const newMarketList = state.marketList.map((market, idx) => {
-    //      if (idx === action.payload) {
-    //        return {
-    //          ...market,
-    //          cards: market.cards - 1,
-    //        };
-    //      }
-    //      return market;
-    //    });
- 
-    //    return {
-    //      ...state,
-    //      totalCards: state.totalCards - 1,
-    //      marketList: newMarketList,
-    //    };
-    //  }
- 
-    //  case types.SYNC_MARKETS:
-    //    return {
-    //      ...state,
-    //      synced: true,
-    //    };
- 
-    //  case types.LOAD_MARKETS:
-    //    return {
-    //      ...state,
-    //      totalMarkets: action.payload.length,
-    //      totalCards: action.payload.reduce((res, m) => res + m.cards, 0),
-    //      marketList: action.payload,
-    //    };
-     // default is else statement
+
      default:
        return state;
   }
