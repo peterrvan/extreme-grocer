@@ -79,6 +79,19 @@
 
       case types.CREATE_LIST: {
         console.log('INSIDE THE REDUCER');
+        const data = [];
+        action.payload.forEach(element => {
+          element.extendedIngredients.forEach(ingredient => {
+            data.push({
+              id: ingredient.id,
+              name: ingredient.name,
+              amount: ingredient.amount,
+              unit: ingredient.unit,
+            })
+          })
+        })
+        console.log('after gathering data: ', data);
+
         return {
           ...state,
         };

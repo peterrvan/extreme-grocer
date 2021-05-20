@@ -57,7 +57,7 @@ export const subQty = index => ({
      console.log(data);
      dispatch({
        type: types.CREATE_LIST,
-       payload: data.data.results,
+       payload: data.data,
      });
    })
 };
