@@ -15,6 +15,7 @@
  //import Buttons from '../components/Buttons.jsx';
  import SearchContainer from './SearchContainer.jsx';
  import DishListContainer from './DishListContainer.jsx';
+ import ShoppingListContainer from './ShoppingListContainer.jsx';
  import * as actions from '../actions/actions.js';
  
  const mapStateToProps = ({
@@ -38,6 +39,7 @@
        {/* <Buttons /> */}
        <SearchContainer />
        <DishListContainer />
+       <ShoppingListContainer />
      </div>
    </div>
  );

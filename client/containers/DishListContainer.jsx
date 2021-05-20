@@ -20,17 +20,10 @@ const mapStateToProps = ({
    dishes: { dishList },
  }) => ({
    dishList,
-   //add quantity
-   //decrease quantity
-   //function for compile ingredients
  });
  
 const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
 
-//  const mapDispatchToProps = dispatch => ({
-//    updateSearch: () => dispatch(actions.updateSearch()),
-//  });
- 
 const DishListContainer = props => {
   let boxes = [];
   let dishId = [];
@@ -56,7 +49,7 @@ const DishListContainer = props => {
   return (
    <div className="dishListContainer">
      <div className="outerBox">
-       <h1 id="header">Shopping List Container</h1>
+       <h1 id="header">Dish List Container</h1>
      </div>
      <div>{boxes}</div>
      <div>
