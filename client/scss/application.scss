@@ -6,7 +6,7 @@ body {
   background: $lightGreen;
   color: $fontColor;
   font-family: 'Alegreya', serif;
-  font-size: 40;
+  font-size: 40px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@ body {
 .button {
   padding: 5px 20px;
   font-family: 'Alegreya', serif;
-  font-size: 25;
+  font-size: 25px;
   color: #fefae0;
   background-color: $fontColor;
   border: 0px solid $lightGreen;
